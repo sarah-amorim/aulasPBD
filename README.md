@@ -10,6 +10,17 @@ INNER JOIN
 Pedidos ON Clientes.ClienteID = Pedidos.ClienteID;
 ```
 
+Este script retorna uma lista de clientes e seus pedidos correspondentes, mostrando:
+
+    Nome do cliente
+    ID do pedido
+    Valor do pedido
+
+Cenário:
+
+Se um cliente tem mais de um pedido, ele aparecerá várias vezes na lista (uma vez para cada pedido).
+Se um cliente não tem pedidos, ele não aparecerá no resultado (porque é um INNER JOIN).
+
 * LEFT JOIN ou LEFT OUTER JOIN
 
 Retorna todas as linhas da tabela à esquerda, e as correspondências da tabela à direita.
