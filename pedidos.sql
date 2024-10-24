@@ -1,5 +1,7 @@
 create table pedidos(
   id serial primary key,
   data_pedido data not null,
-  valor numeric not null
+  valor numeric not null,
+  id_clientes int,
+  foreign key (id_clientes) references clientes(id)
   );
