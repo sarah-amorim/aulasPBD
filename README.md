@@ -25,6 +25,8 @@ Se um cliente não tem pedidos, ele não aparecerá no resultado (porque é um I
 
 Retorna todas as linhas da tabela à esquerda, e as correspondências da tabela à direita.
 
+Todos os clientes, mesmo sem pedidos.
+
 ```
 SELECT Clientes.Nome, Pedidos.PedidoID, Pedidos.Valor 
 FROM Clientes 
@@ -41,6 +43,7 @@ Este script retorna todos os clientes, independentemente de eles terem ou não p
 
 Retorna todas as linhas da tabela à direita, e as correspondências da tabela à esquerda.
 
+Todos os pedidos, mesmo sem clientes.
 ```
 SELECT Clientes.Nome, Pedidos.PedidoID, Pedidos.Valor
 FROM Clientes
