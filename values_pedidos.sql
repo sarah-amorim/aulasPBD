@@ -1,4 +1,4 @@
-INSERT INTO pedidos (clientes_id, data_pedido, valor) VALUES
+INSERT INTO pedidos (id_clientes, data_pedido, valor) VALUES
 (1, '2024-01-15', 100.50),
 (1, '2024-02-01', 75.00),
 (2, '2024-01-20', 250.00),
