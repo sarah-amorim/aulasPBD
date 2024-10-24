@@ -4,10 +4,10 @@
 Retorna apenas as linhas com correspondências em ambas as tabelas.
 
 ```
-SELECT Clientes.Nome, Pedidos.PedidoID, Pedidos.Valor 
+SELECT Clientes.Nome, Pedidos.id, Pedidos.Valor 
 FROM Clientes 
 INNER JOIN
-Pedidos ON Clientes.ClienteID = Pedidos.ClienteID;
+Pedidos ON Clientes.id = Pedidos.id_clientes;
 ```
 
 Este script retorna uma lista de clientes e seus pedidos correspondentes, mostrando:
@@ -28,10 +28,10 @@ Retorna todas as linhas da tabela à esquerda, e as correspondências da tabela 
 Todos os clientes, mesmo sem pedidos.
 
 ```
-SELECT Clientes.Nome, Pedidos.PedidoID, Pedidos.Valor 
+SELECT Clientes.Nome, Pedidos.id, Pedidos.Valor 
 FROM Clientes 
 LEFT JOIN Pedidos 
-ON Clientes.ClienteID = Pedidos.ClienteID;
+ON Clientes.id = Pedidos.id_clientes;
 ```
 
 Este script retorna todos os clientes, independentemente de eles terem ou não pedidos.
@@ -45,10 +45,10 @@ Retorna todas as linhas da tabela à direita, e as correspondências da tabela �
 
 Todos os pedidos, mesmo sem clientes.
 ```
-SELECT Clientes.Nome, Pedidos.PedidoID, Pedidos.Valor
+SELECT Clientes.Nome, Pedidos.id, Pedidos.Valor
 FROM Clientes
 RIGHT JOIN Pedidos
-ON Clientes.ClienteID = Pedidos.ClienteID;
+ON Clientes.id = Pedidos.id_clientes;
 ```
 
 * FULL JOIN ou FULL OUTER JOIN
@@ -59,7 +59,7 @@ Retorna todas as linhas quando há uma correspondência em uma das tabelas.
 SELECT Clientes.Nome, Pedidos.PedidoID, Pedidos.Valor
 FROM Clientes 
 FULL OUTER JOIN
-Pedidos ON Clientes.ClienteID = Pedidos.ClienteID;
+Pedidos ON Clientes.id = Pedidos.id_clientes;
 ```
 
 * CROSS JOIN
@@ -67,7 +67,7 @@ Pedidos ON Clientes.ClienteID = Pedidos.ClienteID;
 Retorna o produto cartesiano entre as tabelas, todas as combinações possíveis.
 
 ```
-SELECT Clientes.Nome, Pedidos.PedidoID 
+SELECT Clientes.Nome, Pedidos.id 
 FROM Clientes 
 CROSS JOIN Pedidos;
 ```
