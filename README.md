@@ -32,6 +32,11 @@ LEFT JOIN Pedidos
 ON Clientes.ClienteID = Pedidos.ClienteID;
 ```
 
+Este script retorna todos os clientes, independentemente de eles terem ou não pedidos.
+
+    Clientes com pedidos: Mostrarão o nome, o ID do pedido e o valor do pedido.
+    Clientes sem pedidos: Mostrarão o nome do cliente, mas as colunas Pedidos.id e Pedidos.Valor terão NULL.
+
 * RIGHT JOIN ou RIGHT OUTER JOIN
 
 Retorna todas as linhas da tabela à direita, e as correspondências da tabela à esquerda.
@@ -42,11 +47,6 @@ FROM Clientes
 RIGHT JOIN Pedidos
 ON Clientes.ClienteID = Pedidos.ClienteID;
 ```
-
-Este script retorna todos os clientes, independentemente de eles terem ou não pedidos.
-
-    Clientes com pedidos: Mostrarão o nome, o ID do pedido e o valor do pedido.
-    Clientes sem pedidos: Mostrarão o nome do cliente, mas as colunas Pedidos.id e Pedidos.Valor terão NULL.
 
 * FULL JOIN ou FULL OUTER JOIN
 
